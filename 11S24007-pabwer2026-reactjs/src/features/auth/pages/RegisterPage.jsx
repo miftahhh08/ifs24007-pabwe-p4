@@ -101,15 +101,15 @@ const RegisterPage = () => {
   return (
     <div>
       <div className="mb-8">
-        <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
+        <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
           Delcom Lost & Found
         </p>
 
-        <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900">
+        <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-900">
           Buat akun baru
-        </h2>
+        </h1>
 
-        <p className="mt-2 text-sm leading-6 text-slate-500">
+        <p className="mt-2 text-sm leading-6 text-slate-600">
           Daftarkan akun untuk mulai menggunakan Delcom Lost &
           Found.
         </p>
@@ -120,7 +120,7 @@ const RegisterPage = () => {
         <div>
           <label
             htmlFor="name"
-            className="mb-2 block text-sm font-semibold text-slate-700"
+            className="mb-2 block text-sm font-semibold text-slate-800"
           >
             Nama
           </label>
@@ -128,7 +128,7 @@ const RegisterPage = () => {
           <div className="relative">
             <FiUser
               aria-hidden="true"
-              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"
             />
 
             <input
@@ -140,7 +140,7 @@ const RegisterPage = () => {
               value={name.value}
               onChange={name.onChange}
               disabled={isLoading}
-              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100"
+              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-500 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100"
             />
           </div>
         </div>
@@ -149,7 +149,7 @@ const RegisterPage = () => {
         <div>
           <label
             htmlFor="email"
-            className="mb-2 block text-sm font-semibold text-slate-700"
+            className="mb-2 block text-sm font-semibold text-slate-800"
           >
             Email
           </label>
@@ -157,7 +157,7 @@ const RegisterPage = () => {
           <div className="relative">
             <FiMail
               aria-hidden="true"
-              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"
             />
 
             <input
@@ -169,7 +169,7 @@ const RegisterPage = () => {
               value={email.value}
               onChange={email.onChange}
               disabled={isLoading}
-              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100"
+              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-500 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100"
             />
           </div>
         </div>
@@ -178,7 +178,7 @@ const RegisterPage = () => {
         <div>
           <label
             htmlFor="password"
-            className="mb-2 block text-sm font-semibold text-slate-700"
+            className="mb-2 block text-sm font-semibold text-slate-800"
           >
             Password
           </label>
@@ -186,7 +186,7 @@ const RegisterPage = () => {
           <div className="relative">
             <FiLock
               aria-hidden="true"
-              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"
             />
 
             <input
@@ -198,7 +198,7 @@ const RegisterPage = () => {
               value={password.value}
               onChange={password.onChange}
               disabled={isLoading}
-              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-12 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100"
+              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-12 text-sm text-slate-900 outline-none transition placeholder:text-slate-500 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100"
             />
 
             <button
@@ -212,7 +212,7 @@ const RegisterPage = () => {
                 setShowPassword((current) => !current)
               }
               disabled={isLoading}
-              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-700 disabled:cursor-not-allowed"
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg p-2 text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 disabled:cursor-not-allowed"
             >
               {showPassword ? <FiEyeOff /> : <FiEye />}
             </button>
@@ -223,7 +223,7 @@ const RegisterPage = () => {
         <div>
           <label
             htmlFor="confirmPassword"
-            className="mb-2 block text-sm font-semibold text-slate-700"
+            className="mb-2 block text-sm font-semibold text-slate-800"
           >
             Konfirmasi Password
           </label>
@@ -231,7 +231,7 @@ const RegisterPage = () => {
           <div className="relative">
             <FiLock
               aria-hidden="true"
-              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"
             />
 
             <input
@@ -245,7 +245,7 @@ const RegisterPage = () => {
               value={confirmPassword.value}
               onChange={confirmPassword.onChange}
               disabled={isLoading}
-              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-12 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100"
+              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-12 text-sm text-slate-900 outline-none transition placeholder:text-slate-500 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100"
             />
 
             <button
@@ -259,7 +259,7 @@ const RegisterPage = () => {
                 setShowConfirmPassword((current) => !current)
               }
               disabled={isLoading}
-              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-700 disabled:cursor-not-allowed"
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg p-2 text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 disabled:cursor-not-allowed"
             >
               {showConfirmPassword ? <FiEyeOff /> : <FiEye />}
             </button>
@@ -270,17 +270,17 @@ const RegisterPage = () => {
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200 disabled:cursor-not-allowed disabled:opacity-60"
+          className="w-full rounded-xl bg-blue-700 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-200 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {isLoading ? "Mendaftarkan..." : "Daftar"}
         </button>
       </form>
 
-      <p className="mt-6 text-center text-sm text-slate-500">
+      <p className="mt-6 text-center text-sm text-slate-600">
         Sudah memiliki akun?{" "}
         <Link
           to="/auth/login"
-          className="font-semibold text-blue-600 hover:text-blue-700"
+          className="font-semibold text-blue-700 hover:text-blue-800"
         >
           Masuk sekarang
         </Link>
@@ -290,3 +290,4 @@ const RegisterPage = () => {
 };
 
 export default RegisterPage;
+

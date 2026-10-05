@@ -14,11 +14,19 @@ const initialState = {
 };
 
 const extractUsers = (payload) => {
-  return payload?.data?.users || payload?.users || [];
+  return (
+    payload?.data?.users ||
+    payload?.users ||
+    []
+  );
 };
 
 const extractUser = (payload) => {
-  return payload?.data?.user || payload?.user || null;
+  return (
+    payload?.data?.user ||
+    payload?.user ||
+    null
+  );
 };
 
 const userSlice = createSlice({

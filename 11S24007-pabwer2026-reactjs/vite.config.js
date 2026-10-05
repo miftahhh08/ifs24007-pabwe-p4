@@ -14,7 +14,8 @@ export default defineConfig(({ mode }) => {
 
     define: {
       DELCOM_BASEURL: JSON.stringify(
-        env.DELCOM_BASEURL || "https://open-api.delcom.org/api/v1"
+        env.DELCOM_BASEURL ||
+          "https://open-api.delcom.org/api/v1"
       ),
     },
 
@@ -23,9 +24,12 @@ export default defineConfig(({ mode }) => {
       environment: "jsdom",
       setupFiles: "./src/setupTests.js",
 
+      pool: "forks",
+
       coverage: {
         provider: "v8",
         reporter: ["text", "json", "html"],
+
         thresholds: {
           lines: 100,
           functions: 100,

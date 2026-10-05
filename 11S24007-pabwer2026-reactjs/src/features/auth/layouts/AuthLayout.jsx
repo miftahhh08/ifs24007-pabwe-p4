@@ -4,7 +4,7 @@ const AuthLayout = () => {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="grid min-h-screen lg:grid-cols-2">
-        <section className="hidden bg-blue-600 p-12 lg:flex lg:flex-col lg:justify-between">
+        <section className="hidden bg-blue-700 p-12 lg:flex lg:flex-col lg:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wider text-blue-100">
               PABWE 2026
@@ -25,7 +25,7 @@ const AuthLayout = () => {
           </p>
         </section>
 
-        <section className="flex items-center justify-center px-6 py-12">
+        <section className="flex min-h-screen items-center justify-center bg-white px-6 py-12 text-slate-900">
           <div className="w-full max-w-md">
             <Outlet />
           </div>

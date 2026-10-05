@@ -228,6 +228,27 @@ describe("apiHelper", () => {
       );
     });
 
+    it("menggunakan content type kosong jika header content-type tidak tersedia", async () => {
+      global.fetch.mockResolvedValue({
+        ok: true,
+        headers: {
+          get: () => null,
+        },
+        text: async () => "OK",
+      });
+
+      await expect(
+        apiFetch("/no-content-type")
+      ).resolves.toBe("OK");
+
+      expect(global.fetch).toHaveBeenCalledWith(
+        "https://open-api.delcom.org/api/v1/no-content-type",
+        expect.objectContaining({
+          method: "GET",
+        })
+      );
+    });
+
     it("membaca response JSON", async () => {
       const result = {
         status: "success",

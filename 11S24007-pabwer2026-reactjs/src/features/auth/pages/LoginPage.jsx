@@ -71,15 +71,15 @@ const LoginPage = () => {
   return (
     <div>
       <div className="mb-8">
-        <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
+        <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
           Delcom Lost &amp; Found
         </p>
 
-        <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900">
+        <h1 className="mt-3 text-3xl font-bold tracking-tight text-slate-900">
           Selamat datang kembali
-        </h2>
+        </h1>
 
-        <p className="mt-2 text-sm leading-6 text-slate-500">
+        <p className="mt-2 text-sm leading-6 text-slate-600">
           Masuk menggunakan email akun Delcom kamu untuk mengelola
           laporan barang hilang dan ditemukan.
         </p>
@@ -89,7 +89,7 @@ const LoginPage = () => {
         <div>
           <label
             htmlFor="login-email-input"
-            className="mb-2 block text-sm font-semibold text-slate-700"
+            className="mb-2 block text-sm font-semibold text-slate-800"
           >
             Email
           </label>
@@ -97,7 +97,7 @@ const LoginPage = () => {
           <div className="relative">
             <FiMail
               aria-hidden="true"
-              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"
             />
 
             <input
@@ -109,7 +109,7 @@ const LoginPage = () => {
               value={email.value}
               onChange={email.onChange}
               disabled={isLoading}
-              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100"
+              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-500 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100"
             />
           </div>
         </div>
@@ -117,7 +117,7 @@ const LoginPage = () => {
         <div>
           <label
             htmlFor="login-password-input"
-            className="mb-2 block text-sm font-semibold text-slate-700"
+            className="mb-2 block text-sm font-semibold text-slate-800"
           >
             Password
           </label>
@@ -125,7 +125,7 @@ const LoginPage = () => {
           <div className="relative">
             <FiLock
               aria-hidden="true"
-              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+              className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-500"
             />
 
             <input
@@ -137,7 +137,7 @@ const LoginPage = () => {
               value={password.value}
               onChange={password.onChange}
               disabled={isLoading}
-              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-12 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100"
+              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-12 text-sm text-slate-900 outline-none transition placeholder:text-slate-500 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100"
             />
 
             <button
@@ -151,7 +151,7 @@ const LoginPage = () => {
                 setShowPassword((current) => !current)
               }
               disabled={isLoading}
-              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-700 disabled:cursor-not-allowed"
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-lg p-2 text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 disabled:cursor-not-allowed"
             >
               {showPassword ? <FiEyeOff /> : <FiEye />}
             </button>
@@ -162,17 +162,17 @@ const LoginPage = () => {
           id="login-submit-button"
           type="submit"
           disabled={isLoading}
-          className="w-full rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200 disabled:cursor-not-allowed disabled:opacity-60"
+          className="w-full rounded-xl bg-blue-700 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-200 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {isLoading ? "Sedang masuk..." : "Masuk"}
         </button>
       </form>
 
-      <p className="mt-6 text-center text-sm text-slate-500">
+      <p className="mt-6 text-center text-sm text-slate-600">
         Belum memiliki akun?{" "}
         <Link
           to="/auth/register"
-          className="font-semibold text-blue-600 hover:text-blue-700"
+          className="font-semibold text-blue-700 hover:text-blue-800"
         >
           Daftar sekarang
         </Link>
@@ -182,3 +182,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
