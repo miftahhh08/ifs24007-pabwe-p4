@@ -1,12 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import {
-  FiEye,
-  FiEyeOff,
-  FiLock,
-  FiMail,
-} from "react-icons/fi";
+import { FiEye, FiEyeOff, FiLock, FiMail } from "react-icons/fi";
 
 import useInput from "../../../hooks/useInput";
 import { asyncAuthLogin } from "../states/authThunks";
@@ -62,7 +57,6 @@ const LoginPage = () => {
       }
 
       await showSuccessDialog("Login berhasil.");
-
       navigate("/");
     } catch (error) {
       await showErrorDialog(
@@ -78,7 +72,7 @@ const LoginPage = () => {
     <div>
       <div className="mb-8">
         <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
-          Delcom Lost & Found
+          Delcom Lost &amp; Found
         </p>
 
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900">
@@ -86,15 +80,15 @@ const LoginPage = () => {
         </h2>
 
         <p className="mt-2 text-sm leading-6 text-slate-500">
-          Masuk menggunakan email akun Delcom kamu untuk
-          mengelola laporan barang hilang dan ditemukan.
+          Masuk menggunakan email akun Delcom kamu untuk mengelola
+          laporan barang hilang dan ditemukan.
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-5">
         <div>
           <label
-            htmlFor="email"
+            htmlFor="login-email-input"
             className="mb-2 block text-sm font-semibold text-slate-700"
           >
             Email
@@ -107,7 +101,7 @@ const LoginPage = () => {
             />
 
             <input
-              id="email"
+              id="login-email-input"
               name="email"
               type="email"
               autoComplete="email"
@@ -122,7 +116,7 @@ const LoginPage = () => {
 
         <div>
           <label
-            htmlFor="password"
+            htmlFor="login-password-input"
             className="mb-2 block text-sm font-semibold text-slate-700"
           >
             Password
@@ -135,7 +129,7 @@ const LoginPage = () => {
             />
 
             <input
-              id="password"
+              id="login-password-input"
               name="password"
               type={showPassword ? "text" : "password"}
               autoComplete="current-password"
@@ -165,6 +159,7 @@ const LoginPage = () => {
         </div>
 
         <button
+          id="login-submit-button"
           type="submit"
           disabled={isLoading}
           className="w-full rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200 disabled:cursor-not-allowed disabled:opacity-60"
