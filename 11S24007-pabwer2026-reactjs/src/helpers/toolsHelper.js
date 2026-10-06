@@ -1,9 +1,15 @@
-import Swal from "sweetalert2";
+const loadSwal = async () => {
+  const module = await import("sweetalert2");
+
+  return module.default;
+};
 
 /**
  * Menampilkan dialog sukses.
  */
-export const showSuccessDialog = (message, title = "Berhasil") => {
+export const showSuccessDialog = async (message, title = "Berhasil") => {
+  const Swal = await loadSwal();
+
   return Swal.fire({
     icon: "success",
     title,
@@ -15,7 +21,9 @@ export const showSuccessDialog = (message, title = "Berhasil") => {
 /**
  * Menampilkan dialog error.
  */
-export const showErrorDialog = (message, title = "Terjadi Kesalahan") => {
+export const showErrorDialog = async (message, title = "Terjadi Kesalahan") => {
+  const Swal = await loadSwal();
+
   return Swal.fire({
     icon: "error",
     title,
@@ -31,6 +39,8 @@ export const showConfirmDialog = async (
   message,
   title = "Konfirmasi"
 ) => {
+  const Swal = await loadSwal();
+
   const result = await Swal.fire({
     icon: "warning",
     title,
